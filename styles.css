@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Definición de variables globales */
+:root {
+  --font-family: 'Roboto', sans-serif; /* Definición de la fuente global utilizada en todo el documento */
+  --primary-color: black; /* Definición del color primario utilizado en enlaces y otros elementos */
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Definición de la sombra utilizada en elementos */
+  --grid-columns: 6; /* Definición del número de columnas en el grid utilizado en el contenido */
+  --footer-margin-top: 10%; /* Definición de la margen superior del footer */
+}
+
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(
+    --font-family
+  ); /* Se aplica la fuente global a todos los elementos */
+}
+
+body {
+  margin: 20px; /* Se establece un margen de 20px en el cuerpo del documento */
+}
+
+ul,
+ol {
+  list-style: none; /* Se eliminan los estilos de viñetas en listas desordenadas y ordenadas */
+}
+
+a {
+  text-decoration: none; /* Se elimina el subrayado predeterminado de los enlaces */
+  color: var(--primary-color); /* Se aplica el color primario a los enlaces */
+}
+
+/* HEADER */
+/* Estilos del contenedor 1 */
+.contenedor1 {
+  display: flex; /* Se utiliza flexbox para alinear los elementos internos */
+  align-items: flex-start; /* Se alinean los elementos al inicio del eje vertical */
+  justify-content: space-between; /* Se distribuyen uniformemente los elementos en el contenedor */
+  font-size: 12px; /* Se establece el tamaño de fuente para el contenido del contenedor */
+}
+
+.contenedor1 > a > img {
+  width: 140px; /* Se establece un ancho fijo para la imagen dentro del enlace */
+}
+
+.contenedor1 > nav {
+  width: 60%; /* Se asigna un ancho del 60% al menú de navegación */
+  text-align: end; /* Se alinea el texto hacia la derecha */
+}
+.menu {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+}
+.contenedor1 > nav > ul > li {
+  display: inline; /* Se colocan los elementos de la lista en línea horizontal */
+  padding-right: 2%; /* Se añade un pequeño espacio a la derecha de cada elemento de la lista */
+}
+
+/* Estilos del contenedor 2 */
+.contenedor2 {
+  margin-top: 40px; /* Se establece un margen superior de 40px */
+  display: flex; /* Se utiliza flexbox para alinear los elementos internos */
+  justify-content: space-between; /* Se distribuyen uniformemente los elementos en el contenedor */
+}
+
+.contenedor2 > img {
+  margin: auto; /* Se centra vertical y horizontalmente la imagen */
+  height: 10%; /* Se establece una altura fija para la imagen */
+}
+
+.contenedor2 > nav {
+  width: 30%; /* Se asigna un ancho del 30% al menú de navegación */
+  text-align: end; /* Se alinea el texto hacia la derecha */
+}
+
+.contenedor2 > nav > ul > li > a > img {
+  width: 30px; /* Se establece un ancho fijo para los iconos de enlace */
+  padding-right: 2%; /* Se añade un pequeño espacio a la derecha de cada enlace */
+  padding-top: 15px; /* Se añade un pequeño espacio arriba de cada enlace */
+}
+
+.contenedor2 > nav > ul > li {
+  padding: 2%; /* Se añade un pequeño espacio alrededor de cada elemento de la lista */
+  display: inline; /* Se colocan los elementos de la lista en línea horizontal */
+}
+
+.contenedor2 > nav > ul > li > form {
+  display: inline; /* Se coloca el formulario en línea horizontal */
+}
+
+.search-button {
+  background-color: transparent; /* Se establece el color de fondo transparente para el botón de búsqueda */
+  border: none; /* Se elimina el borde del botón de búsqueda */
+  right: 0; /* Se coloca el botón de búsqueda al extremo derecho */
+  top: 50%; /* Se alinea verticalmente el botón de búsqueda al centro */
+  padding: 8px; /* Se añade un relleno de 8px alrededor del botón de búsqueda */
+  transform: translateY(10%); /* Se traslada el botón de búsqueda hacia abajo */
+  transform: translateX(
+    150%
+  ); /* Se traslada el botón de búsqueda hacia la derecha */
+}
+
+.search-input {
+  border: none; /* Se elimina el borde del campo de búsqueda */
+  text-align: center; /* Se centra el texto dentro del campo de búsqueda */
+  width: 160px; /* Se establece un ancho fijo para el campo de búsqueda */
+  padding-top: 4px; /* Se añade un pequeño espacio arriba del campo de búsqueda */
+  border-bottom: 2px solid var(--primary-color); /* Se agrega un borde inferior de 2px sólido */
+}
+
+.search-form {
+  display: flex; /* Se utiliza flexbox para alinear los elementos internos */
+  align-items: center; /* Se alinean los elementos al centro verticalmente */
+  position: relative; /* Se posiciona el formulario de búsqueda de manera relativa */
+}
+
+/* Estilos del contenedor 3 */
+.contenedor3 {
+  display: flex; /* Se utiliza flexbox para alinear los elementos internos */
+  margin-top: 40px; /* Se establece un margen superior de 40px */
+  justify-content: center; /* Se centran horizontalmente los elementos */
+}
+
+.contenedor3 > nav {
+  width: 80%; /* Se asigna un ancho del 80% al menú de navegación */
+}
+
+.contenedor3 > nav > ul > li {
+  display: inline; /* Se colocan los elementos de la lista en línea horizontal */
+  padding-left: 5%; /* Se añade un pequeño espacio a la izquierda de cada elemento de la lista */
+  font-size: 13px; /* Se establece el tamaño de fuente para los elementos de la lista */
+}
+
+/* MAIN */
+/* Estilos del contenedor 4 */
+.contenedor4 {
+  margin-top: 40px; /* Se establece un margen superior de 40px */
+  background-image: url(assets/imagen_primark.png); /* Se establece una
+
+ imagen de fondo */
+  background-size: contain; /* Se ajusta el tamaño de la imagen para que quepa dentro del contenedor */
+  width: 100%; /* Se establece un ancho del 100% */
+}
+
+.contenedor7 {
+  background-color: transparent; /* Se establece el color de fondo transparente */
+  width: 45%; /* Se asigna un ancho del 45% */
+  padding: 12.5%; /* Se añade un relleno del 12.5% */
+}
+
+/* Estilos del contenedor 5 */
+.contenedor5 {
+  justify-content: center; /* Se centran horizontalmente los elementos */
+  display: grid; /* Se utiliza grid para el diseño del contenido */
+  grid-template-columns: repeat(
+    var(--grid-columns),
+    15%
+  ); /* Se establece el diseño de columnas del grid */
+  grid-template-rows: auto auto; /* Se establece el diseño de filas del grid */
+  grid-gap: 10px; /* Se añade un espacio de 10px entre las celdas del grid */
+  margin-top: -40px; /* Se compensa el margen superior para alinear con otros elementos */
+}
+
+.item {
+  display: flex; /* Se utiliza flexbox para alinear los elementos internos */
+  flex-direction: column; /* Se coloca los elementos en columnas */
+  align-items: center; /* Se centran los elementos horizontalmente */
+  justify-content: center; /* Se centran los elementos verticalmente */
+  overflow: hidden; /* Se oculta el contenido que desborda el contenedor */
+}
+
+.item img {
+  width: 100%; /* Se establece un ancho del 100% */
+  max-width: 200px; /* Se establece un ancho máximo de 200px */
+  height: auto; /* Se ajusta automáticamente la altura */
+  max-height: 400px; /* Se establece una altura máxima de 400px */
+  box-shadow: var(
+    --box-shadow
+  ); /* Se añade una sombra alrededor de la imagen */
+}
+
+.item p {
+  margin-top: 10px; /* Se añade un espacio superior de 10px */
+  text-transform: uppercase; /* Se convierte el texto a mayúsculas */
+  font-size: 14px; /* Se establece el tamaño de fuente a 14px */
+  font-weight: bold; /* Se establece el peso de la fuente en negrita */
+}
+.item img:hover,
+.item p:hover {
+  cursor: pointer;
+}
+/* Footer */
+footer {
+  margin-top: var(
+    --footer-margin-top
+  ); /* Se establece la margen superior del footer */
+}
+
+footer img {
+  width: 20px; /* Se establece un ancho fijo de 20px para las imágenes dentro del footer */
+}
+
+.contenedor6 > nav > ul > li {
+  display: inline; /* Se colocan los elementos de la lista en línea horizontal */
+  padding: 5%; /* Se añade un espacio alrededor de cada elemento de la lista */
+}
+
+.contenedor6 > nav {
+  width: 50%; /* Se asigna un ancho del 50% */
+  margin: auto; /* Se centra horizontalmente el menú de navegación */
+  justify-content: center; /* Se centran los elementos horizontalmente */
+  align-items: center; /* Se centran los elementos verticalmente */
+  text-align: center; /* Se alinea el texto al centro */
+}
+
+.contenedor8 {
+  margin-top: 5%; /* Se establece un margen superior de 5% */
+  display: grid; /* Se utiliza grid para el diseño del contenido */
+  grid-template-columns: repeat(
+    var(--grid-columns),
+    1fr
+  ); /* Se establece el diseño de columnas del grid */
+  grid-gap: 10px; /* Se añade un espacio de 10px entre las celdas del grid */
+}
+
+.footer-seccion h4 {
+  padding-bottom: 10%; /* Se añade un espacio inferior de 10% */
+  font-weight: lighter; /* Se establece un peso de fuente más ligero */
+  font-size: 13px; /* Se establece el tamaño de fuente a 13px */
+}
+
+.footer-seccion a {
+  font-size: 12px; /* Se establece el tamaño de fuente a 12px */
+  padding-bottom: 2%; /* Se añade un espacio inferior de 2% */
+  display: block; /* Se convierte en elemento de bloque para ocupar el ancho completo */
+  margin-bottom: 5px; /* Se añade un espacio inferior de 5px */
+}
+
+.footer-selector {
+  grid-column: 2 / -1; /* Se establece la posición del selector de pie de página */
+  text-align: left; /* Se alinea el texto a la izquierda */
+  padding-top: 20px; /* Se añade un espacio superior de 20px */
+  font-size: 13px; /* Se establece el tamaño de fuente a 13px */
+}
+
+/*-----MEDIA QUERY--------------*/
+/* Media query para dispositivos con un ancho máximo de 768px, como móviles */
+@media screen and (max-width: 768px) {
+  /* Ocultar la imagen de fondo del contenedor 4 y hacerlo transparente */
+  .contenedor4 {
+    background-image: none;
+    background-color: transparent;
+  }
+
+  /* Mostrar la imagen del menú y ocultar el menú de navegación del header */
+  .menu {
+    display: block;
+  }
+  .contenedor1 > nav {
+    display: none;
+  }
+
+  /* Ajustar el tamaño de la imagen de Primark para que sea visualmente igual al tamaño del menú */
+  .contenedor2 > img {
+    height: 20px; /* Altura del menú */
+    width: auto; /* Ancho automático para mantener la proporción */
+  }
+  header > img {
+    height: 30px;
+    margin-top: -8.5%;
+  }
+  /* Ocultar el formulario de búsqueda y mostrar solo la imagen de la lupa y de favoritos */
+  .contenedor2 > nav > ul > li > form {
+    display: none;
+  }
+  .contenedor2 > nav > ul > li > a > img {
+    display: inline; /* Mostrar solo las imágenes de la lupa y de favoritos */
+    height: 42px;
+  }
+
+  /* Ocultar el contenedor3 */
+  .contenedor3 {
+    display: none;
+  }
+
+  /* Ajustar el diseño de las imágenes de ropa en el contenedor 5 para mostrarlas en dos filas */
+  .contenedor5 {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: auto; /* Filas automáticas */
+  }
+  .contenedor6 > nav {
+    display: inline;
+  }
+  .contenedor7 {
+    width: auto;
+    padding-left: 0px;
+    margin-bottom: 10px;
+  }
+  /* Ajustar el diseño del footer para mostrarlo en una sola columna  ... NO SE COMO MODIFICARLO, PREGUNTAR TUTOR*/
+  .contenedor8 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 10px);
+  }
+
+  /* Ajustar el tamaño de fuente de los h4 en el footer */
+  .footer-seccion h4 {
+    font-size: 16px;
+  }
+
+  /* Mostrar las opciones de los h4 en el footer cuando se hace clic */
+  .footer-seccion a {
+    display: none; /* Ocultar las opciones por defecto */
+  }
+  .footer-seccion:active a {
+    display: block; /* Mostrar las opciones cuando se hace clic */
+  }
+}
+
+/*----------------DUDAS TUTOR AYUDA----------------------
+Hola tutor! como puedes haber visto este es mi css, pero tengo 2 problemas, (segun yo , seguro que hay mas jajaja) bromas aparte.
+1. No se como colocar el fondo de la imagen en el .contenedor4 para que cuando haga la pagina solo un poco mas pequenia, no se repita.
+Aqui , lo he intentado de varias maneras, pero no hay manera , me puedes ayudar?
+2. El footer, y los desplegables de seleccion que aparecen en la pagina original de primark, cuando hago mi media query, no se como hacer para que se me pongan en filas :( , me estoy volviendo loca.
+Si pudieras ayudarme, te lo agradeceria un monton. Buen dia!*/
